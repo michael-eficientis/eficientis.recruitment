@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">
-  # Eficientis DevOps Technical Assessment
+  Eficientis DevOps Technical Assessment
 </h1>
 
 This technical assessment has been meticulously crafted to evaluate your DevOps expertise through a series of practical challenges that mirror real-world scenarios encountered in our organization. To participate, please fork this repository to your GitHub account and complete the challenges at your own pace.
@@ -42,19 +42,23 @@ git clone https://github.com/eficientis/eficientis.recruitment.git
 ## Challenge 1: Docker and CI/CD Implementation
 
 ### Objective
+
 Develop a web server application using your preferred programming language (Node.js recommended) that listens on port 8000 and returns structured information about the container environment when accessed.
 
 ### Requirements
+
 - Create a web server application that listens on port 8000
 - The server should return a structured response containing container information
 - Create a Dockerfile to containerize the application
 - Build and test the Docker image
 
 ### Resources
+
 - HTTP Server documentation: https://docs.python.org/3/library/http.server.html
 - Dockerfile instructions: https://docs.docker.com/develop/develop-images/instructions/
 
 ### Optional Enhancements
+
 - Implement command-line arguments (e.g., `--host`, `--port`)
 - Enhance Dockerfile security measures
 - Support runtime arguments via `docker run`
@@ -73,18 +77,22 @@ Result:PASS [Total:3] [Passed:3] [Failed:0] [Warn:0] [Skipped:0]
 ## Challenge 2: Kubernetes Deployment and Helm Chart Development
 
 ### Objective
+
 Deploy the application developed in Challenge 1 to a Kubernetes cluster using Helm charts, with the application exposed via an Ingress controller.
 
 ### Requirements
+
 - Create a Helm chart for the application
 - Deploy the application to your Kubernetes cluster
 - Configure an Ingress controller (Nginx or Traefik)
 - Ensure proper application exposure and accessibility
 
 ### Alternative Approach
+
 If Challenge 1 was not completed, use the latest `httpd` image in the Helm chart.
 
 ### Resources
+
 - Helm best practices: https://helm.sh/docs/chart_best_practices
 - NIP.io documentation: https://nip.io
 - Kubernetes documentation:
@@ -94,6 +102,7 @@ If Challenge 1 was not completed, use the latest `httpd` image in the Helm chart
 - Ingress Controller documentation: https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/
 
 ### Optional Enhancements
+
 - Generate comprehensive Helm chart documentation
 - Implement end-to-end testing using GitHub Actions
 - Validate `values.yaml` using `values.schema.json`
@@ -101,22 +110,27 @@ If Challenge 1 was not completed, use the latest `httpd` image in the Helm chart
 ## Challenge 3: Infrastructure as Code Implementation with Terraform
 
 ### Objective
+
 Develop Terraform manifests to implement the infrastructure shown in the diagram below, ensuring proper configuration and service initialization.
 
 ### Requirements
+
 - Create Terraform manifests for the specified infrastructure
 - Implement `user_data` to install and configure `httpd` service
 - Ensure proper infrastructure organization and documentation
 - Create `challenge-3` directory to store all files
 
 ### Infrastructure Diagram
+
 ![Infrastructure Architecture](images/ch3-diagram-infrastructure.png)
 
 ### Expected Output
+
 Upon successful deployment, the Load Balancer should return the following response:
 ![Expected Load Balancer Response](images/ch3-output-load-balancer.png)
 
 ### Resources
+
 - IaC Test Environment:
   - AWS Free Tier account: https://aws.amazon.com/free/
   - Localstack API: https://localstack.cloud
@@ -131,6 +145,7 @@ Upon successful deployment, the Load Balancer should return the following respon
     - Auto Scaling Groups: https://registry.terraform.io/modules/terraform-aws-modules/autoscaling/aws/latest
 
 ### Optional Enhancements
+
 - Generate comprehensive Terraform documentation using `terraform-docs`
 - Implement Terraform syntax validation and linting:
   - Syntax validation
